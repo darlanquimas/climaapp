@@ -21,12 +21,11 @@ class _HomeState extends State<Home> {
   var currently;
   var humidity;
   var windSpeed;
-  // var apiURL =
-  //     "http://api.openweathermap.org/data/2.5/weather?q=nova%20friburgo&units=imperial&appid=51331d8691039af84ceeebc1b2227bd6";
+    
 
   Future getWeather() async {
     http.Response response = await http.get(
-        "http://api.openweathermap.org/data/2.5/weather?q=nova%20friburgo&units=imperial&appid=51331d8691039af84ceeebc1b2227bd6");
+        "http://api.openweathermap.org/data/2.5/weather?q=nova%20friburgo&units=imperial&appid=[Sua api key]");
 
     var result = jsonDecode(response.body);
     setState(() {
